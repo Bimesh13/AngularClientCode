@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Gameweek</th>
+      <th scope="col">Home Team</th>
+      <th scope="col">Away Team</th>
+      <th scope="col">Date</th>
+<!--       <th scope="col">Time</th> -->
+    </tr>
+  </thead>
+  <tbody *ngIf="fixture">
+    <tr *ngFor="let a of fixture.matches">
+      <td>{{a.matchday}}</td>
+      <td>{{a.homeTeam.name}}</td>
+      <td>{{a.awayTeam.name}}</td>
+      <td>{{a.utcDate}}</td>
+    </tr>
+  </tbody>
+
+  	  
+
+
+
+ 
+  

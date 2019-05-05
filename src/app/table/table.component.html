@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">SN</th>
+      <th scope="col">Club</th>
+      <th scope="col">MP</th>
+      <th scope="col">W</th>
+      <th scope="col">D</th>
+      <th scope="col">L</th>
+      <th scope="col">GS</th>
+      <th scope="col">GA</th>
+      <th scope="col">GD</th>
+      <th scope="col">Points</th>
+    </tr>
+  </thead>
+  <tbody *ngIf="fixture">
+    <tr *ngFor="let a of fixture">
+      <td>{{a.position}}</td>
+      <td>{{a.team_name}}</td>
+      <td>{{a.overall_gp}}</td>
+      <td>{{a.overall_w}}</td>
+      <td>{{a.overall_d}}</td>
+      <td>{{a.overall_l}}</td>
+      <td>{{a.overall_gs}}</td>
+      <td>{{a.overall_ga}}</td>
+      <td>{{a.gd}}</td>
+      <td>{{a.points}}</td>
+  <tr>
