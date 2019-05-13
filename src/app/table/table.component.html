@@ -14,8 +14,8 @@
       <th scope="col">Points</th>
     </tr>
   </thead>
-  <tbody *ngIf="fixture">
-    <tr *ngFor="let a of fixture">
+  <tbody *ngIf="table">
+    <tr *ngFor="let a of table">
       <td>{{a.position}}</td>
       <td>{{a.team_name}}</td>
       <td>{{a.overall_gp}}</td>
@@ -26,4 +26,12 @@
       <td>{{a.overall_ga}}</td>
       <td>{{a.gd}}</td>
       <td>{{a.points}}</td>
-  <tr>
+  </tr>
+</tbody>
+</table>
+<footer>
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+    <a routerLink="/"> Result Analyser</a>
+  </div>
+</footer>
+

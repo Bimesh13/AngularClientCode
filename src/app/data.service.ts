@@ -8,7 +8,7 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-  getData(){
+  getTable(){
   	return this.http.get('http://api.football-api.com/2.0/standings/1204?Authorization=565ec012251f932ea4000001fa542ae9d994470e73fdb314a8a56d76')
   }
 
@@ -19,9 +19,7 @@ export class DataService {
 
   POST_HEADERS = {
   	headers: new HttpHeaders({
-  		'Access-Control-Allow-Origin':'*',
   		'Content-Type': 'application/json',
-  		'Access-Control-Allow-Methods': 'POST, GET, DELETE, OPTIONS'
   	}),
   	responseType: 'json' as 'json'
   };
@@ -29,7 +27,7 @@ export class DataService {
 	getPrediction(teamdata){
 	return(
 	this.http
-  			.post('http://127.0.0.1:8000/employees', teamdata, this.POST_HEADERS)
+  			.post('http://127.0.0.1:8000/prediction/', teamdata, this.POST_HEADERS)
   			);
   }
 }

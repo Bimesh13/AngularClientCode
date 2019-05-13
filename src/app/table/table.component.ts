@@ -8,15 +8,16 @@ import { DataService } from '../data.service';
 })
 export class TableComponent implements OnInit {
 
-  fixture: Object;
+  table: Object;
 
   constructor(private data: DataService) { }
   
 
   ngOnInit() {
-  	this.data.getData().subscribe(data => {
-    this.fixture = data
-  		console.log(this.fixture);
+  	this.data.getTable().subscribe(data => {
+    this.table = data
+  		console.log(this.table);
   	})
   }
 }
+

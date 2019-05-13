@@ -8,35 +8,37 @@ import { DataService } from '../data.service';
 })
 
 export class HomeComponent implements OnInit {
-  final = '';
+  final1 = '';
+
 
   constructor(private data: DataService) { }
 
   ngOnInit() {
   }
 
-
-
-  doPrediction(team1, team2){
+  doPrediction1(team1, team2){
   	if(team1.value == team2.value){
   		alert("Same team selected");
   		return;
   	}
 
-  	const teams = {
+  	const teams1 = {
   		'team1': team1.value,
   		'team2': team2.value
   	};
 
-  	this.data.getPrediction(teams).subscribe(data => {
-	  	if(data == 'W'){
-	  		this.final = team1.value;
-	  	} else if (data == 'D'){
-	  		this.final = 'Draw';
+  	this.data.getPrediction(teams1).subscribe(data => {
+	  	if(data == 1){
+	  		this.final1 = (team1.value + " is the winner !");
+	  	} else if (data == 0){
+	  		this.final1 = 'It is a Draw';
 	  	} else {
-	  		this.final = team2.value;
+	  		this.final1 = (team2.value + " is the winner !");
 	  	}
+      console.log(data);
   	})
+
+
 
 
   	
